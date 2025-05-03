@@ -10,6 +10,7 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.List
 import androidx.compose.material.icons.outlined.Settings
@@ -52,10 +53,10 @@ class MainActivity : ComponentActivity() {
                         route = "restaurantList"
                     ),
                     NavItem(
-                        title = "Settings",
-                        iconSelected = Icons.Filled.Settings,
-                        iconUnselected = Icons.Outlined.Settings,
-                        route = "restaurantSettings"
+                        title = "Add",
+                        iconSelected = Icons.Filled.Add,
+                        iconUnselected = Icons.Outlined.Add,
+                        route = "restaurantAdd"
                     )
                 )
 
