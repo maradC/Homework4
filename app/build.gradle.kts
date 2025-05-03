@@ -41,6 +41,11 @@ android {
 }
 
 dependencies {
+
+    //Icons
+    var compose_version="1.5.4"
+    implementation("androidx.compose.material:material-icons-extended:$compose_version")
+
     implementation("androidx.datastore:datastore-preferences:1.0.0")
 
     var roomVersion = "2.6.1"
