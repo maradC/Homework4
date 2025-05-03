@@ -49,13 +49,13 @@ class MainActivity : ComponentActivity() {
                         title = "Restaurants",
                         iconSelected = Icons.Filled.Home,
                         iconUnselected = Icons.Outlined.Home,
-                        route = Screen.RestaurantList.route
+                        route = "restaurantList"
                     ),
                     NavItem(
                         title = "Settings",
                         iconSelected = Icons.Filled.Settings,
                         iconUnselected = Icons.Outlined.Settings,
-                        route = Screen.Settings.route
+                        route = "restaurantSettings"
                     )
                 )
 
@@ -110,7 +110,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyFAB(navController: NavHostController) {
     FloatingActionButton(onClick = {
-        navController.navigate(Screen.AddRestaurant.route) {
+        navController.navigate("restaurantAdd") {
             // Optional configuration:
             // launchSingleTop = true
         }
