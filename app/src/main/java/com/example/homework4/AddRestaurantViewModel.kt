@@ -11,26 +11,25 @@ import kotlinx.coroutines.flow.collectLatest
 class AddRestaurantViewModel(private val repository: RestaurantRepository) : ViewModel() {
 
     val restaurantName = MutableStateFlow("")
-    val cuisine = MutableStateFlow("")
+    val location = MutableStateFlow("")
     val rating = MutableStateFlow("")
 
     fun addRestaurant() {
         val name = restaurantName.value
-        val cuisineType = cuisine.value
+        val locationValue = location.value
         val ratingValue = rating.value.toDoubleOrNull() ?: 0.0
 
-        if (name.isNotBlank() && cuisineType.isNotBlank()) {
+        if (name.isNotBlank() && locationValue.isNotBlank()) {
             val restaurant = Restaurant(
                 name = name,
-                cuisine = cuisineType,
+                location = locationValue,
                 rating = ratingValue
             )
 
             viewModelScope.launch {
                 repository.addRestaurant(restaurant)
-                // Reset form fields
                 restaurantName.value = ""
-                cuisine.value = ""
+                location.value = ""
                 rating.value = ""
             }
         }
