@@ -7,7 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 
 @Composable
-fun AppNavHost(navController: NavHostController, modifier: Modifier = Modifier ){
+fun RestaurantNav(navController: NavHostController, modifier: Modifier = Modifier ){
     NavHost(navController = navController, startDestination = "restaurantList", modifier = modifier) {
         composable(route = "restaurantList") {
             RestaurantListScreen()

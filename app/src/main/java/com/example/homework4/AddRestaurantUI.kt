@@ -15,10 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
-fun AddRestaurantScreen(
-    modifier: Modifier = Modifier,
-    viewModel: AddRestaurantViewModel = viewModel { AddRestaurantViewModel(MyApplication.restaurantRepository) }
-) {
+fun AddRestaurantScreen(modifier: Modifier = Modifier, viewModel: AddRestaurantViewModel = viewModel { AddRestaurantViewModel(MyApplication.restaurantRepository) }) {
     val restaurantName by viewModel.restaurantName.collectAsState()
     val location by viewModel.location.collectAsState()
     val rating by viewModel.rating.collectAsState()

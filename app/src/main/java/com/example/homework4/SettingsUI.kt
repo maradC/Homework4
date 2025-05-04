@@ -14,10 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
-fun SettingsScreen(
-    modifier: Modifier = Modifier,
-    viewModel: SettingsViewModel = viewModel { SettingsViewModel(MyApplication.restaurantRepository) }
-) {
+fun SettingsScreen(modifier: Modifier = Modifier, viewModel: SettingsViewModel = viewModel { SettingsViewModel(MyApplication.restaurantRepository) }) {
     val showRating by viewModel.showRating.collectAsState()
 
     Column(modifier = modifier.fillMaxSize()) {

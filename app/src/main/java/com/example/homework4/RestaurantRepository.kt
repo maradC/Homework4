@@ -11,7 +11,6 @@ class RestaurantRepository(private val restaurantDatabase: RestaurantDatabase, p
 
     private val restaurantDao = restaurantDatabase.restaurantDAO()
 
-    // Room DB Actions
     suspend fun getAllRestaurants(): Flow<List<Restaurant>> {
         return restaurantDao.selectAll()
     }
@@ -20,7 +19,6 @@ class RestaurantRepository(private val restaurantDatabase: RestaurantDatabase, p
         restaurantDao.insert(restaurant)
     }
 
-    // Preferences DataStore Action
     suspend fun getShowRating(): Flow<Boolean> {
         return myPreferences.watchShowRating()
     }
