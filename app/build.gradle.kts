@@ -42,7 +42,6 @@ android {
 
 dependencies {
 
-    //Icons
     var compose_version="1.5.4"
     implementation("androidx.compose.material:material-icons-extended:$compose_version")
 
@@ -53,7 +52,6 @@ dependencies {
     implementation("androidx.room:room-ktx:$roomVersion")
     kapt( "androidx.room:room-compiler:$roomVersion")
 
-    // updated dependecy for VM and NAV
     implementation("androidx.navigation:navigation-compose:2.8.9")
 
     var lifecycle_version = "2.8.7"
